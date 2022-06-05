@@ -1967,11 +1967,32 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Main',
   props: {
     'searchResults': Array,
-    'planets': Array
+    'planets': Array,
+    'result': Object,
+    'planet': Object
   }
 });
 
@@ -3273,7 +3294,19 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("ul", [_c("li", [_vm._v(_vm._s(_vm.searchResults.name) + " PROVA")])]),
+    _c("div", [
+      _c("ul", [
+        _c("li", [_vm._v("Nome: " + _vm._s(_vm.result.name))]),
+        _vm._v(" "),
+        _c("li", [_vm._v("Populazione: " + _vm._s(_vm.result.population))]),
+        _vm._v(" "),
+        _c("li", [_vm._v("Diametro: " + _vm._s(_vm.result.diameter))]),
+        _vm._v(" "),
+        _c("li", [_vm._v("Terreno: " + _vm._s(_vm.result.terrain))]),
+        _vm._v(" "),
+        _c("li", [_vm._v("Film: " + _vm._s(_vm.result.films))]),
+      ]),
+    ]),
   ])
 }
 var staticRenderFns = []
@@ -3303,10 +3336,14 @@ var render = function () {
     [
       _c("Header", { on: { textEnteredEvt: _vm.searchPlanets } }),
       _vm._v(" "),
-      _vm._l(_vm.searchResults, function (planet, index) {
+      _vm._l(_vm.searchResults, function (result, index) {
         return _c("Main", {
           key: index,
-          attrs: { searchResults: _vm.searchResults, planets: _vm.planets },
+          attrs: {
+            searchResults: _vm.searchResults,
+            planets: _vm.planets,
+            result: result,
+          },
         })
       }),
     ],

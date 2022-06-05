@@ -1,8 +1,8 @@
 <template>
   <div>
       <Header @textEnteredEvt="searchPlanets" />
-      <Main :searchResults="searchResults" :planets="planets" 
-      v-for= "(planet, index) in searchResults" :key= "index" />
+      <Main :searchResults="searchResults" :planets="planets" :result="result"
+      v-for= "(result, index) in searchResults" :key= "index"/>
   </div>
 </template>
 
