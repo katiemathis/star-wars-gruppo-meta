@@ -119,6 +119,100 @@ class PlanetsTableSeeder extends Seeder
                     "https://swapi.dev/api/films/5/"
                 ],
             ],
+            [
+                "name" => "Geonosis",
+                "diameter" => "11370",
+                "terrain" => "rock, desert, mountain, barren",
+                "population" => "100000000000",
+                "films" => [
+                    "https://swapi.dev/api/films/5/"
+                ],
+                
+            ],
+            [
+                "name" => "Utapau",
+                "diameter" => "12900",
+                "terrain" => "scrublands, savanna, canyons, sinkholes",
+                "population" => "95000000",
+                "films" => [
+                    "https://swapi.dev/api/films/6/"
+                ],
+            ],
+            [
+                "name" => "Mustafar",
+                "diameter" => "4200",
+                "terrain" => "volcanoes, lava rivers, mountains, caves",
+                "population" => "20000",
+                "films" => [
+                    "https://swapi.dev/api/films/6/"
+                ],
+            ],
+            [
+                "name" => "Kashyyyk",
+                "diameter" => "12765",
+                "climate" => "tropical",
+                "terrain" => "jungle, forests, lakes, rivers",
+                "population" => "45000000",
+                "films" => [
+                    "https://swapi.dev/api/films/6/"
+                ],
+            ],
+            [
+                "name" => "Polis Massa",
+                "diameter" => "0",
+                "climate" => "artificial temperate ",
+                "terrain" => "airless asteroid",
+                "population" => "1000000",
+                "films" => [
+                    "https://swapi.dev/api/films/6/"
+                ],
+            ],
+            [
+                "name" => "Mygeeto",
+                "diameter" => "10088",
+                "climate" => "frigid",
+                "terrain" => "glaciers, mountains, ice canyons",
+                "population" => "19000000",
+                "films" => [
+                    "https://swapi.dev/api/films/6/"
+                ],
+
+            ],
+            [
+                "name" => "Felucia",
+                "diameter" => "9100",
+                "climate" => "hot, humid",
+                "terrain" => "fungus forests",
+                "population" => "8500000",
+                "films" => [
+                    "https://swapi.dev/api/films/6/"
+                ],
+            ],
+            [
+                "name" => "Cato Neimoidia",
+                "diameter" => "0",
+                "terrain" => "mountains, fields, forests, rock arches",
+                "population" => "10000000",
+                "films" => [
+                    "https://swapi.dev/api/films/6/"
+                ],
+            ],
+            [
+                "name" => "Saleucami",
+                "diameter" => "14920",
+                "terrain" => "caves, desert, mountains, volcanoes",
+                "population" => "1400000000",
+                "films" => [
+                    "https://swapi.dev/api/films/6/"
+                ],
+            ],
+            [
+                "name" => "Stewjon",
+                "diameter" => "0",
+                "terrain" => "grass",
+                "population" => "unknown",
+                "films" => [],
+            ]
         ];
 
         foreach($planets as $planet) {
