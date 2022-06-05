@@ -25,6 +25,12 @@ class UsersTableSeeder extends Seeder
                 "name" => "Luke",
                 "lastname" => "Skywalker",
             ],
+            [
+                "username" => "prova",
+                "email" => "prova@skywalker.com",
+                "name" => "Prova",
+                "lastname" => "Prova",
+            ],
             
         ];
 

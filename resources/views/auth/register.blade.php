@@ -17,6 +17,8 @@
                             <div class="col-md-6">
                                 <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
 
+                                
+
                                 @error('username')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -94,7 +96,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Torna al login') }}</a>
+                                <a class="btn btn-link" href="{{ route('login') }}">{{ __('Torna al login') }}</a>
                             </div>
                         </div>
                     </form>
