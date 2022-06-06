@@ -22,7 +22,7 @@
 
 <script>
 export default {
-    name: 'MyHeader',
+    name: 'AdminHeader',
     data () {
         return {
             planetSearchText: '',

@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    I pianeti di Star Wars
                 </div>
 
                 <div class="links">

@@ -17,7 +17,7 @@ class CreatePlanetsTable extends Migration
             $table->id();
             $table->string('name')->required();
             $table->string('population')->nullable();
-            $table->unsignedBigInteger('diameter')->nullable();
+            $table->string('diameter')->nullable();
             $table->string('terrain')->nullable();
             $table->json('films');
             $table->string('slug')->unique()->nullable();

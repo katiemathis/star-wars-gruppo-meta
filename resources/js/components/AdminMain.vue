@@ -29,7 +29,7 @@
 
 <script>
 export default {
-    name: 'Main',
+    name: 'AdminMain',
     props: {
         'searchResults': Array,
         'planets': Array,

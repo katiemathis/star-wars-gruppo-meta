@@ -1,42 +1,34 @@
 <template>
-  <div>
+    <div>
         <GuestHeader />
-        <router-view></router-view>
         <GuestMain />
-      
-  </div>
+    </div>
+    
 </template>
 
 <script>
 import GuestHeader from '../components/GuestHeader.vue';
 import GuestMain from '../components/GuestMain.vue';
 
-
 export default {
-    name: 'App',
+    name: 'GuestHome',
     components: {
-      GuestHeader,
-      GuestMain
+        GuestHeader,
+        GuestMain
     },
     data() {
-      return {
-        navLinks: [
+        return {
+            navLinks: [
                 {
-                  
-                },
-                {
-                    
                     to : 'admin-home',
                     name : 'adminhome',
                 },
             ]
-
-      }
+        }
+        
     }
 
-  }
-  
-
+}
 </script>
 
 <style>
