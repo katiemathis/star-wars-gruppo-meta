@@ -12,11 +12,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route::get('/', function () {
-//     return view('welcome');
+Route::get('/', function () {
+    return view('auth.login');
 
 
-// });
+});
 
 Auth::routes();
 
@@ -26,9 +26,15 @@ Route::middleware('auth')
     ->prefix('admin')
     ->group(function() {
 
-    Route::get('/', 'HomeController@index')->name('home');
+
+   Route::get('/', 'HomeController@index')->name('home'); 
+   
 
 });
+
+//Route::resource('planets', 'Api\PlanetController');
+
+
 
 Route::get('{any?}', function() {
     return view('guest.home');

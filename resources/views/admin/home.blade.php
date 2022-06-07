@@ -15,17 +15,21 @@
                     @endif
 
                     May the force be with you {{$user->name}}
+                    <div>
+                        <a class="btn-navigation" href= "/pianeti-home">Clicca per continuare</a>
+                    </div>
+                    
                 </div>
 
                     
-                {{-- per fare redirect del utente registrato al client side, però manca la possibilità di fare logout --}}
-                {{-- @if(!(Auth::user()))
+                {{-- per fare redirect del utente registrato al client side in automatico --}}
+                @if(!(Auth::user()))
                         {{ 'Login' }}
-                    @else 
-                        <script>
-                            window.location = "/admin-home";
-                        </script>
-                    @endif --}}
+                @else 
+                    <script>
+                        window.location = "/pianeti-home";
+                    </script>
+                @endif
 
             </div>
         </div>

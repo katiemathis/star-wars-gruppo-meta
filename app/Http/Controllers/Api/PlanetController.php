@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Planet;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PlanetController extends Controller
 {
@@ -13,9 +14,11 @@ class PlanetController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $planets = Planet::all();
+        $planets = DB::table('planets')->simplePaginate(10);
+        //$planets = Planet::all()->paginate(10);
+        //$planets = Planet::all();
 
         if($planets){
             return response()->json([

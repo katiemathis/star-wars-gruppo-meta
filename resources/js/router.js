@@ -3,8 +3,8 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
-import AdminHome from './pages/AdminHome';
-import GuestHome from './pages/GuestHome';
+import Home from './pages/Home';
+import Planets from './pages/Planets';
 
 
 const router = new VueRouter({
@@ -12,16 +12,15 @@ const router = new VueRouter({
 
     routes: [
         {
-            path: '/',
-            name: 'guesthome',
-            component: GuestHome
+            path: '/pianeti-home',
+            name: 'pianeti-home',
+            component: Home
         },
         {
-            path: '/admin-home',
-            name: 'adminhome',
-            component: AdminHome
-        }
-
+            path: '/pianeti',
+            name: 'pianeti',
+            component: Planets
+        },
 
     ]
 });
