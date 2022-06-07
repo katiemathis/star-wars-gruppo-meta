@@ -38,7 +38,7 @@ export default {
 
 .my_card {
   width: 15vw;
-  height: 400px;
+  height: 300px;
 
 }
 
@@ -46,10 +46,7 @@ h1 {
   color: white;
 }
 
-li {
-    list-style-type: none;
-    padding-left: 0;
-}
+
 
 span {
     font-weight: bold;

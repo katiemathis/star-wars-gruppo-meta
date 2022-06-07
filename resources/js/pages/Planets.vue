@@ -115,7 +115,7 @@ export default {
 
 .my_card {
   width: 15vw;
-  height: 400px;
+  height: 300px;
   overflow: hidden;
 }
 

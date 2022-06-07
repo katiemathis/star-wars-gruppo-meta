@@ -301,7 +301,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.my_card {\n  width: 15vw;\n  height: 400px;\n}\nh1 {\n  color: white;\n}\nli {\n    list-style-type: none;\n    padding-left: 0;\n}\nspan {\n    font-weight: bold;\n}\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n.my_card {\n  width: 15vw;\n  height: 300px;\n}\nh1 {\n  color: white;\n}\nspan {\n    font-weight: bold;\n}\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -339,7 +339,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.my_card {\n  width: 15vw;\n  height: 400px;\n  overflow: hidden;\n}\nh1 {\n  color: white;\n}\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n.my_card {\n  width: 15vw;\n  height: 300px;\n  overflow: hidden;\n}\nh1 {\n  color: white;\n}\n\n\n\n\n\n", ""]);
 
 // exports
 
