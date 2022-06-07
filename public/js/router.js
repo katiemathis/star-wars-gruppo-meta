@@ -120,18 +120,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//const axios = require('axios');
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'FilteredPlanets',
   props: {
     'searchResults': {
       type: Array,
       required: true
-    } //'result': Object
-
+    }
   }
 });
 
@@ -194,22 +189,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -322,7 +301,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.my_card {\n  width: 15vw;\n  max-height: 200px;\n  overflow: hidden;\n}\nh1 {\n  color: white;\n}\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n.my_card {\n  width: 15vw;\n  height: 400px;\n}\nh1 {\n  color: white;\n}\nli {\n    list-style-type: none;\n    padding-left: 0;\n}\nspan {\n    font-weight: bold;\n}\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -360,7 +339,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.my_card {\n  width: 15vw;\n  max-height: 200px;\n  overflow: hidden;\n}\nh1 {\n  color: white;\n}\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n.my_card {\n  width: 15vw;\n  height: 400px;\n  overflow: hidden;\n}\nh1 {\n  color: white;\n}\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -1538,7 +1517,10 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "gallery_container d-inline-flex justify-content-center" },
+    {
+      staticClass:
+        "gallery_container d-inline-flex justify-content-center container",
+    },
     [
       _c("div", { staticClass: "col-10 m-auto align-self-center" }, [
         _c("h1", { staticClass: "my-2" }, [_vm._v("Risultati")]),
@@ -1548,21 +1530,31 @@ var render = function () {
           { staticClass: "row d-inline-flex" },
           _vm._l(_vm.searchResults, function (result, index) {
             return _c("div", { key: index, staticClass: "card my_card m-2" }, [
-              _c("div", { staticClass: "card-body" }, [
+              _c("div", { staticClass: "card-body p-1" }, [
                 _c("h5", { staticClass: "card-title" }, [
                   _vm._v(_vm._s(result.name)),
                 ]),
                 _vm._v(" "),
                 _c("ul", [
                   _c("li", [
-                    _vm._v("Populazione: " + _vm._s(result.population)),
+                    _c("span", [_vm._v("Populazione:")]),
+                    _vm._v(" " + _vm._s(result.population)),
                   ]),
                   _vm._v(" "),
-                  _c("li", [_vm._v("Diametro: " + _vm._s(result.diameter))]),
+                  _c("li", [
+                    _c("span", [_vm._v("Diametro:")]),
+                    _vm._v(" " + _vm._s(result.diameter)),
+                  ]),
                   _vm._v(" "),
-                  _c("li", [_vm._v("Terreno: " + _vm._s(result.terrain))]),
+                  _c("li", [
+                    _c("span", [_vm._v("Terreno:")]),
+                    _vm._v(" " + _vm._s(result.terrain)),
+                  ]),
                   _vm._v(" "),
-                  _c("li", [_vm._v("Film: " + _vm._s(result.films))]),
+                  _c("li", [
+                    _c("span", [_vm._v("Url Film:")]),
+                    _vm._v(" " + _vm._s(result.films)),
+                  ]),
                 ]),
               ]),
             ])
@@ -1659,98 +1651,90 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "div",
-      { staticClass: "gallery_container d-inline-flex justify-content-center" },
-      [
-        _c("div", { staticClass: "col-10 m-auto align-self-center" }, [
-          _c("h1", { staticClass: "my-2" }, [_vm._v("Elenco pianeti")]),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "row d-inline-flex" },
-            _vm._l(_vm.planets, function (planet, index) {
-              return _c(
-                "div",
-                { key: index, staticClass: "card my_card m-2" },
-                [
-                  _c("div", { staticClass: "card-body" }, [
-                    _c("h5", { staticClass: "card-title" }, [
-                      _vm._v(_vm._s(planet.name)),
-                    ]),
-                    _vm._v(" "),
-                    _c("ul", [
-                      _c("li", [
-                        _vm._v("Populazione: " + _vm._s(planet.population)),
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _vm._v("Diametro: " + _vm._s(planet.diameter)),
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [_vm._v("Terreno: " + _vm._s(planet.terrain))]),
-                      _vm._v(" "),
-                      _c("li", [_vm._v("Film: " + _vm._s(planet.films))]),
-                    ]),
+  return _c(
+    "div",
+    { staticClass: "gallery_container d-inline-flex justify-content-center" },
+    [
+      _c("div", { staticClass: "col-10 m-auto align-self-center" }, [
+        _c("h1", { staticClass: "my-2" }, [_vm._v("Elenco pianeti")]),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "row d-inline-flex" },
+          _vm._l(_vm.planets, function (planet, index) {
+            return _c("div", { key: index, staticClass: "card my_card m-2" }, [
+              _c("div", { staticClass: "card-body" }, [
+                _c("h5", { staticClass: "card-title" }, [
+                  _vm._v(_vm._s(planet.name)),
+                ]),
+                _vm._v(" "),
+                _c("ul", [
+                  _c("li", [
+                    _vm._v("Populazione: " + _vm._s(planet.population)),
                   ]),
-                ]
-              )
-            }),
-            0
-          ),
-          _vm._v(" "),
-          _c("nav", { attrs: { "aria-label": "Page navigation example" } }, [
-            _c("ul", { staticClass: "pagination" }, [
-              _c(
-                "li",
-                {
-                  staticClass: "page-item",
-                  class: _vm.currentPage == 1 ? "disabled" : "",
-                },
-                [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "page-link",
-                      on: {
-                        click: function ($event) {
-                          return _vm.getPlanets(_vm.currentPage - 1)
-                        },
+                  _vm._v(" "),
+                  _c("li", [_vm._v("Diametro: " + _vm._s(planet.diameter))]),
+                  _vm._v(" "),
+                  _c("li", [_vm._v("Terreno: " + _vm._s(planet.terrain))]),
+                  _vm._v(" "),
+                  _c("li", [_vm._v("Url Film: " + _vm._s(planet.films))]),
+                ]),
+              ]),
+            ])
+          }),
+          0
+        ),
+        _vm._v(" "),
+        _c("nav", { attrs: { "aria-label": "Page navigation example" } }, [
+          _c("ul", { staticClass: "pagination" }, [
+            _c(
+              "li",
+              {
+                staticClass: "page-item",
+                class: _vm.currentPage == 1 ? "disabled" : "",
+              },
+              [
+                _c(
+                  "span",
+                  {
+                    staticClass: "page-link",
+                    on: {
+                      click: function ($event) {
+                        return _vm.getPlanets(_vm.currentPage - 1)
                       },
                     },
-                    [_vm._v("Previous")]
-                  ),
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                {
-                  staticClass: "page-item",
-                  class: _vm.currentPage == 6 ? "disabled" : "",
-                },
-                [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "page-link",
-                      on: {
-                        click: function ($event) {
-                          return _vm.getPlanets(_vm.currentPage + 1)
-                        },
+                  },
+                  [_vm._v("Previous")]
+                ),
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "li",
+              {
+                staticClass: "page-item",
+                class: _vm.currentPage == 6 ? "disabled" : "",
+              },
+              [
+                _c(
+                  "span",
+                  {
+                    staticClass: "page-link",
+                    on: {
+                      click: function ($event) {
+                        return _vm.getPlanets(_vm.currentPage + 1)
                       },
                     },
-                    [_vm._v("Next")]
-                  ),
-                ]
-              ),
-            ]),
+                  },
+                  [_vm._v("Next")]
+                ),
+              ]
+            ),
           ]),
         ]),
-      ]
-    ),
-  ])
+      ]),
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

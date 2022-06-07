@@ -1,20 +1,17 @@
 <template>
-
-
-
-    <div class="gallery_container d-inline-flex justify-content-center">
+    <div class="gallery_container d-inline-flex justify-content-center container">
                 <div class="col-10 m-auto align-self-center">
                     <h1 class="my-2">Risultati</h1>
                     <div class="row d-inline-flex">
                         <div class="card my_card m-2" v-for="(result,index) in searchResults" :key="index"> 
-                            <div class="card-body" >
-                                <h5 class="card-title">{{result.name}}</h5>                        
+                            <div class="card-body p-1" >
+                                <h5 class="card-title">{{result.name}}</h5> 
                                 <ul>
-                                    <li>Populazione: {{result.population}}</li>
-                                    <li>Diametro: {{result.diameter}}</li>
-                                    <li>Terreno: {{result.terrain}}</li>
-                                    <li>Film: {{result.films}}</li>
-                                </ul>                    
+                                    <li><span>Populazione:</span> {{result.population}}</li>
+                                    <li><span>Diametro:</span> {{result.diameter}}</li>
+                                    <li><span>Terreno:</span> {{result.terrain}}</li>
+                                    <li><span>Url Film:</span> {{result.films}}</li>  
+                                </ul>                                        
                           </div>
 
                         </div>
@@ -27,16 +24,11 @@
 </template>
 
 <script>
-//const axios = require('axios');
-
-
-
-
 export default {
     name: 'FilteredPlanets',
     props: {
         'searchResults': { type: Array, required: true},
-        //'result': Object
+        
     }
 }
 
@@ -46,12 +38,21 @@ export default {
 
 .my_card {
   width: 15vw;
-  max-height: 200px;
-  overflow: hidden;
+  height: 400px;
+
 }
 
 h1 {
   color: white;
+}
+
+li {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+span {
+    font-weight: bold;
 }
 
 

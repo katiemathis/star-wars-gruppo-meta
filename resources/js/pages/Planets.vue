@@ -1,7 +1,5 @@
 <template>
 
-<div>
-
     <div class="gallery_container d-inline-flex justify-content-center">
                 <div class="col-10 m-auto align-self-center">
                     <h1 class="my-2">Elenco pianeti</h1>
@@ -15,26 +13,12 @@
                                     <li>Populazione: {{planet.population}}</li>
                                     <li>Diametro: {{planet.diameter}}</li>
                                     <li>Terreno: {{planet.terrain}}</li>
-                                    <li>Film: {{planet.films}}</li>
+                                    <li>Url Film: {{planet.films}}</li>
                                 </ul>                    
                           </div>
 
                         </div>
                     </div>
-                    <!-- <div class="row d-inline-flex">
-                        <div class="card my_card m-2" v-for="(result, index) in searchResults" :key="index"> 
-                            <div class="card-body">
-                                <h5 class="card-title">{{result.name}}</h5>                        
-                                <ul>
-                                    <li>Populazione: {{result.population}}</li>
-                                    <li>Diametro: {{result.diameter}}</li>
-                                    <li>Terreno: {{result.terrain}}</li>
-                                    <li>Film: {{result.films}}</li>
-                                </ul>                    
-                          </div>
-
-                        </div>
-                    </div> -->
                     <nav aria-label="Page navigation example">
                       <ul class="pagination">
                           <li class="page-item" :class="(currentPage == 1)?'disabled':''" ><span class="page-link" @click="getPlanets(currentPage - 1)">Previous</span></li>
@@ -44,7 +28,7 @@
                     
                 </div>
   </div>
-</div>
+
   
         
 </template>
@@ -131,7 +115,7 @@ export default {
 
 .my_card {
   width: 15vw;
-  max-height: 200px;
+  height: 400px;
   overflow: hidden;
 }
 
