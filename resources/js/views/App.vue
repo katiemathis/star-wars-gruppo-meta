@@ -1,7 +1,7 @@
 <template>
   <div class="app_container">
       <Header @textEnteredEvt="searchPlanets" />
-      <Main />
+      <Main :searchResults="searchResults" />
       <Footer />
 
 

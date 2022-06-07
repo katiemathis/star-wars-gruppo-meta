@@ -26,7 +26,7 @@
                         <input type="text" placeholder="Inserisci nome pianeta..." 
                         v-model= "planetSearchText" v-on:keyup.enter="$emit('textEnteredEvt', planetSearchText)">
                         <!-- by using the $emit function, the details in this component get sent to the "padre" app -->
-                        <button class='btn' @click="$emit('textEnteredEvt', planetSearchText)">RICERCA</button>
+                        <button class='btn' @click="$emit('textEnteredEvt', planetSearchText)"><router-link class="nav-link" :to="{name: 'filtered-planets'}">RICERCA</router-link></button>
                     </div>
                     <div class="row mt-2">
                         <a class="btn-header" href="/">Login e Registrazione</a>

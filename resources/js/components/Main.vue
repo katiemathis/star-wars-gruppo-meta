@@ -1,10 +1,14 @@
 <template>
-  <router-view></router-view>
+  <router-view :searchResults="searchResults"></router-view>
 </template>
 
 <script>
 export default {
-    name: 'Home',
+    name: 'Main',
+    props: {
+      'searchResults': Array
+    }
+
 }
 </script>
 

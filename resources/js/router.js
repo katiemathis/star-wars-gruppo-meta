@@ -5,6 +5,7 @@ Vue.use(VueRouter);
 
 import Home from './pages/Home';
 import Planets from './pages/Planets';
+import FilteredPlanets from './pages/FilteredPlanets';
 
 
 const router = new VueRouter({
@@ -21,6 +22,13 @@ const router = new VueRouter({
             name: 'pianeti',
             component: Planets
         },
+        {
+            path: '/filtered-planets',
+            name: 'filtered-planets',
+            component: FilteredPlanets,
+            props: true,
+        },
+
 
     ]
 });
